@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91111 practice — Grandma's Love Letters — mock reading paper</title>
+<style>
+:root{--bg:#f4f2ee;--paper:#fff;--ink:#1d1d1f;--muted:#6b6b70;--line:#dedad3;--accent:#9b2d20;--on-accent:#fff;--accent-soft:#f6e9e6;--chip:#efece6;--me:#e3efe9;--them:#f1efea;--focus:#2d6cdf}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#161616;--paper:#1f1f20;--ink:#ececec;--muted:#a3a3a8;--line:#353537;--accent:#e2735f;--on-accent:#1a0d0a;--accent-soft:#3a2420;--chip:#2a2a2c;--me:#22332b;--them:#2a2a2c;--focus:#7aa7ff;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#161616;--paper:#1f1f20;--ink:#ececec;--muted:#a3a3a8;--line:#353537;--accent:#e2735f;--on-accent:#1a0d0a;--accent-soft:#3a2420;--chip:#2a2a2c;--me:#22332b;--them:#2a2a2c;--focus:#7aa7ff;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.zh,.zh *{font-family:"PingFang SC","Hiragino Sans GB","Noto Sans SC","Microsoft YaHei",sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding-block:24px 104px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+header.top{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:22px 24px;margin-bottom:18px}
+.std{display:flex;gap:12px;align-items:baseline;flex-wrap:wrap}
+.std .num{font-weight:700;color:var(--accent);font-size:1.05rem;letter-spacing:.04em}
+.std h1{font-size:1.25rem;margin:0;font-weight:650}
+.meta{color:var(--muted);font-size:.92rem;margin-top:4px}
+.grades{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0 6px}
+.grades div{background:var(--chip);border-radius:8px;padding:8px 10px;font-size:.84rem}
+.grades b{display:block;font-size:.78rem;color:var(--muted);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+.instr{font-size:.92rem;margin:10px 0 0;padding-left:18px}
+.instr li{margin:2px 0}
+section.q{background:var(--paper);border:1px solid var(--line);border-radius:14px;margin:18px 0;overflow:hidden}
+.qhead{padding:14px 22px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:baseline}
+.qhead h2{margin:0;font-size:1.05rem}
+.qhead .tag{font-size:.8rem;color:var(--muted)}
+.cols{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr)}
+.cols>div{padding:18px 22px}
+.res{border-right:1px solid var(--line);background:linear-gradient(var(--paper),var(--paper))}
+.res .inner{position:sticky;top:12px}
+.intro{color:var(--muted);font-size:.93rem;margin:0 0 12px}
+.text{font-size:1.14rem;line-height:1.95}
+.text p{margin:0 0 .7em}
+.text h4{margin:.6em 0 .3em;font-size:1.05rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:8px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.card .ct{font-weight:700;margin-bottom:4px;color:var(--accent)}
+.chat{display:flex;flex-direction:column;gap:8px;margin:6px 0}
+.msg{max-width:85%;padding:8px 12px;border-radius:14px;background:var(--them)}
+.msg.right{align-self:flex-end;background:var(--me)}
+.msg .who{font-size:.78rem;color:var(--muted);display:block}
+.email{border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.email .eh{background:var(--chip);padding:8px 14px;font-size:.9rem}
+.email .eb{padding:12px 14px}
+.post{border-left:3px solid var(--line);padding:4px 12px;margin:10px 0}
+.post.reply{margin-left:22px}
+.post .who{font-weight:650;font-size:.95rem}.post .when{color:var(--muted);font-size:.8rem;margin-left:6px}
+.imgnote{border:1px dashed var(--line);border-radius:10px;padding:10px;color:var(--muted);font-size:.85rem;margin:8px 0}
+.gloss{margin:14px 0 4px;border-top:1px solid var(--line);padding-top:10px}
+.gloss h5{margin:0 0 6px;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.gloss table{border-collapse:collapse;font-size:.95rem}
+.gloss td{padding:2px 14px 2px 0}
+.qs .part{margin:0 0 18px}
+.qs .part p{margin:0 0 6px}
+.qs .part b{color:var(--accent);margin-right:4px}
+textarea{width:100%;min-height:130px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:inherit;resize:vertical}
+textarea:focus,button:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
+.notes textarea{min-height:110px;background:var(--chip)}
+.player{display:flex;flex-direction:column;gap:8px;margin:6px 0 14px}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+button{font:inherit;border:1px solid var(--line);background:var(--paper);color:var(--ink);border-radius:999px;padding:8px 14px;cursor:pointer}
+button.play{background:var(--accent);border-color:var(--accent);color:var(--on-accent);font-weight:600}
+button:disabled{opacity:.4;cursor:not-allowed}
+.left{font-size:.8rem;color:var(--muted)}
+.now{font-size:.85rem;color:var(--accent);min-height:1.2em}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--line);padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;gap:10px;justify-content:center;flex-wrap:wrap;align-items:center;font-size:.9rem;z-index:5}
+.bar label{display:flex;gap:6px;align-items:center;color:var(--muted)}
+.bar button{padding:6px 12px;font-size:.88rem}
+@media (max-width:640px){.bar{gap:6px}.bar .long{display:none}}
+.copybox{position:fixed;left:0;right:0;bottom:0;background:var(--paper);border-top:2px solid var(--accent);padding-top:12px;padding-bottom:calc(12px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));z-index:6;display:flex;flex-direction:column;gap:8px}
+.copybox textarea{min-height:180px;font-size:.85rem}
+.saved{color:var(--muted);font-size:.8rem}
+@media (max-width:820px){.cols{grid-template-columns:1fr}.res{border-right:0;border-bottom:1px solid var(--line)}.res .inner{position:static}.grades{grid-template-columns:1fr}}
+@media print{.bar,.player,button{display:none!important}body{background:#fff}section.q{break-inside:avoid-page;border-color:#999}.res .inner{position:static}textarea{border:1px solid #999;min-height:160px}}
+</style>
+</head>
+<body>
+<div class="wrap" id="app"></div>
+<div class="bar">
+  <label title="Unlimited plays; you can stop a play"><input type="checkbox" id="practice"> Practice mode<span class="long">&nbsp;(unlimited plays)</span></label>
+  <button id="copy">Copy answers</button>
+  <button id="dl">Download</button>
+  <button id="clear">Clear</button>
+  <button id="prn">Print</button>
+  <span class="saved" id="saved"></span>
+</div>
+<script>
+const P = {"standard": "91111", "title": "Grandma's Love Letters — mock reading paper", "id": "91111-L2-grandmas-letters", "items": [{"title_zh": "我的摄影比赛", "title_en": "Blog post", "type": "Blog post", "intro": "Read Text A and answer Question One.", "allow": ["安娜", "惠灵顿", "月"], "glosses": [{"zh": "第一名", "py": "dì yī míng", "en": "first place"}, {"zh": "吵架", "py": "chǎojià", "en": "to argue"}, {"zh": "博客", "py": "bókè", "en": "blog"}, {"zh": "摄影", "py": "shèyǐng", "en": "photography"}, {"zh": "情书", "py": "qíngshū", "en": "love letter"}, {"zh": "信", "py": "xìn", "en": "letter (一封信 = one letter)"}, {"zh": "旧", "py": "jiù", "en": "old (not new) — Level 3 word"}, {"zh": "心", "py": "xīn", "en": "heart"}], "blocks": [{"type": "heading", "text": "我的摄影比赛（安娜的博客）"}, {"type": "p", "text": "上个月，我参加了学校的摄影比赛。比赛的名字是“我的家人”。我给奶奶照了一张照片，叫《等》。照片上，奶奶坐在窗户旁边，手里有一封很旧的信，她笑得像一个年轻的女生。"}, {"type": "p", "text": "比赛以前，我爸爸不同意我参加。他认为摄影没有用，我应该多复习数学。我们吵架了，我非常失望。后来，我给他看了爷爷和奶奶的情书，他才明白：每个人都有自己喜欢的东西。"}, {"type": "p", "text": "上个星期五，校长告诉我，我的照片得了第一名！我可以去惠灵顿学习摄影一个星期。爸爸听了以后，比我还高兴。他说：“对不起，以前我不太关心你喜欢什么。”下个月，我就要去惠灵顿了，我想在那里照很多照片。"}, {"type": "p", "text": "这次比赛让我明白了，照片不只是好看的东西，它也可以讲一个人的故事。奶奶的照片讲的是她和爷爷的故事，也讲了她等了很多年的心。"}, {"type": "p", "text": "奶奶说，她要把这张照片放在爷爷的照片旁边。现在，我的数学成绩也不错，因为爸爸每天晚上都帮我复习。爸爸还说，下次比赛，他也想看我的照片。"}], "questions": [{"part": "a", "text": "What was the competition, and what was Ana's photo?", "lines": 6}, {"part": "b", "text": "Why did Ana's father not want her to enter at first, and what changed his mind?", "lines": 8}, {"part": "c", "text": "How has the relationship between Ana and her father changed? Use evidence.", "lines": 10}], "schedule": {"evidence": [{"band": "A", "heading": "(a) What was the competition, and what was Ana's photo?", "points": ["School photography competition called “My family”.", "Her photo “Waiting”: Grandma by the window holding a very old letter, smiling like a young girl."]}, {"band": "M", "heading": "(b) Why did Ana's father not want her to enter at first, and what changed ", "points": ["He thought photography was useless and she should revise maths.", "They argued; she was disappointed.", "She showed him the love letters — he understood everyone has something they love."]}, {"band": "E", "heading": "(c) How has the relationship between Ana and her father changed? Use evide", "points": ["Before: conflict — he did not care what she liked; argument; disappointment.", "After winning: he is happier than she is and apologises for not caring before.", "Now he helps her revise maths every evening and her marks are good — mutual support; both sides compromised."]}], "A": "Identifies the competition and Ana’s photo.", "M": "Clearly explains why her father objected and what changed his mind, with evidence.", "E": "Thoroughly explains how the relationship changes — from conflict to apology and mutual support — and what the photo means.", "model": "Ana and her father move from conflict to support. At first he thought photography was useless and wanted her to revise maths; they argued and she was disappointed. When she showed him her grandparents’ love letters, he understood everyone has something they love. After her photo of Grandma by the window with an old letter won first prize, he was even happier than Ana and apologised for not caring before. Now he helps her with maths every evening, her marks are good, and he wants to see her next photos."}, "id": "1"}, {"title_zh": "给寄宿家庭的信", "title_en": "Email", "type": "Email", "intro": "Read Text B and answer Question Two.", "allow": ["Sophie", "上海", "小雪", "惠灵顿", "新西兰", "月", "海", "王叔叔", "王阿姨"], "glosses": [{"zh": "交换生", "py": "jiāohuànshēng", "en": "exchange student"}, {"zh": "甜点", "py": "tiándiǎn", "en": "dessert"}, {"zh": "紧张", "py": "jǐnzhāng", "en": "nervous"}], "blocks": [{"type": "heading", "text": "王叔叔、王阿姨："}, {"type": "p", "text": "你们好！我叫Sophie，今年十六岁，是惠灵顿的一个高中生。下个月，我要去上海做三个月的交换生，住在你们家。我会在十月三号坐飞机到上海。我非常高兴，也有一点儿紧张。"}, {"type": "p", "text": "我先介绍一下我自己。我家有四个人：爸爸、妈妈、弟弟和我。我学中文已经三年了，可是我的中文还不太好，常常听不懂别人说话，所以请你们说得慢一点儿。我喜欢照相、游泳和做饭，也很想学做中国菜。我想在上海照很多照片，回新西兰以后给我的同学们看。我会做新西兰的一种甜点，到了上海，我想做给你们吃。"}, {"type": "p", "text": "我有几个问题想问你们。第一，上海的冬天冷不冷？我应该带什么衣服？第二，你们家附近有没有游泳的地方？第三，听说你们的女儿小雪也十六岁，她喜欢做什么？我希望我们可以成为好朋友。"}, {"type": "p", "text": "我妈妈让我问你们，你们喜欢什么礼物？她想给你们带一些新西兰的东西。我爸爸妈妈也想跟你们说谢谢，谢谢你们让我住在你们家。"}, {"type": "p", "text": "谢谢你们！希望很快见到你们。"}, {"type": "p", "text": "Sophie"}], "questions": [{"part": "a", "text": "Who is Sophie and why is she writing?", "lines": 6}, {"part": "b", "text": "What does Sophie tell the Wangs about herself, and what does she ask them?", "lines": 8}, {"part": "c", "text": "How does Sophie's email show she wants to make a good start with her host family? Use evidence.", "lines": 10}], "schedule": {"evidence": [{"band": "A", "heading": "(a) Who is Sophie and why is she writing?", "points": ["16-year-old high-school student from Wellington.", "Going to Shanghai for a three-month exchange and will live with the Wang family."]}, {"band": "M", "heading": "(b) What does Sophie tell the Wangs about herself, and what does she ask t", "points": ["Family of four; learning Chinese for three years but not good yet — please speak slowly; likes photography, swimming, cooking; will make a NZ dessert.", "Asks: Shanghai winter / what clothes; swimming pool nearby; what daughter Xiaoxue likes; what gift they’d like."]}, {"band": "E", "heading": "(c) How does Sophie's email show she wants to make a good start with her h", "points": ["Polite and warm greeting and closing; honest about her Chinese level.", "Offers something: cooking a NZ dessert; her mum wants to bring gifts.", "Shows interest in their lives (daughter, hopes to be friends) and prepares carefully (clothes, swimming) — positive, considerate."]}], "A": "Identifies who Sophie is and why she is writing.", "M": "Clearly describes what Sophie says about herself and what she asks.", "E": "Thoroughly explains how the email shows she wants a good start (polite, honest, offering something, interested in the family).", "model": "Sophie’s email shows she wants to make a good start with the Wangs. She is a 16-year-old from Wellington going to Shanghai for three months. She is honest that her Chinese is not good and asks them to speak slowly, and she offers to make a New Zealand dessert. She asks practical questions about winter clothes and swimming, and shows interest in their daughter Xiaoxue, hoping they can be friends. Her mother wants to bring gifts, and her parents thank them — a polite, warm, thoughtful email."}, "id": "2"}, {"title_zh": "大学附近的房间", "title_en": "Two rental listings", "type": "Two rental listings", "intro": "Read Text C and answer Question Three.", "allow": ["月", "海"], "glosses": [{"zh": "床", "py": "chuáng", "en": "bed"}, {"zh": "厨房", "py": "chúfáng", "en": "kitchen"}, {"zh": "养", "py": "yǎng", "en": "to keep (a pet)"}, {"zh": "衣柜", "py": "yīguì", "en": "wardrobe"}, {"zh": "包括", "py": "bāokuò", "en": "to include"}, {"zh": "宠物", "py": "chǒngwù", "en": "pet"}, {"zh": "房东", "py": "fángdōng", "en": "landlord"}], "blocks": [{"type": "heading", "text": "第一个房间：在大学旁边"}, {"type": "p", "text": "一个房间，离大学走路只要五分钟。房间很小，可是很新，有一张床、一张桌子和一个衣柜。房子里一共住四个学生，大家一起用厨房和洗手间。每个星期一百八十块，包括水电和上网。不能养宠物。房子后面有一个小花园，周末可以在那里看书。附近有超市和图书馆，买东西很方便。现在住在那里的学生都是大学一年级的，大家常常一起做饭。如果你喜欢一个人住，可能会觉得人太多。每个人最少要住六个月。"}, {"type": "p", "text": "第二个房间：在海边"}, {"type": "p", "text": "一个很大的房间，有自己的洗手间，窗户外边就是大海，非常漂亮。房子里住两个老人和一个学生。房东每天给你做晚饭，周末还会带你去附近玩儿。每个星期两百五十块，包括晚饭、水电和上网。离大学有一点儿远，坐公共汽车要二十五分钟，可是公共汽车站就在门口。房东以前是中学老师，他们很喜欢跟年轻人聊天，也可以帮你练习英文。可是晚上十点以后不能请朋友来家里。"}], "questions": [{"part": "a", "text": "Describe the room next to the university.", "lines": 6}, {"part": "b", "text": "What extra things does the room by the sea offer, and what are its disadvantages?", "lines": 8}, {"part": "c", "text": "Which room would better suit a first-year international student? Justify your choice using details from both listings. Use evidence from the text to support your answer.", "lines": 10}], "schedule": {"evidence": [{"band": "A", "heading": "(a) Describe the room next to the university.", "points": ["5 minutes’ walk to university; small but new; bed, desk, wardrobe.", "Four students share kitchen and bathroom; $180/week incl. power, water, internet; no pets; small garden; supermarket and library nearby; first-year students who often cook together; may feel crowded if you like living alone."]}, {"band": "M", "heading": "(b) What extra things does the room by the sea offer, and what are its dis", "points": ["Big room, own bathroom, sea view; older couple cook dinner daily and take you out at weekends; $250 incl. dinner; landlords are former teachers who can help with English.", "Disadvantages: more expensive; 25 minutes by bus to university (though bus stop at the door); no friends over after 10 pm."]}, {"band": "E", "heading": "(c) Which room would better suit a first-year international student? Justi", "points": ["Room 1: cheap, close, independent, other students — good for friends and saving money, but must cook and share.", "Room 2: dinner and a family atmosphere, help settling in, practice language — but costlier and further away.", "Any justified choice weighing cost, distance, food, company."]}], "A": "Identifies some features of the room next to the university.", "M": "Clearly describes the extras and disadvantages of the room by the sea.", "E": "Thoroughly compares both rooms and makes a justified choice for a first-year international student.", "model": "I would choose the room by the sea for a first-year international student. It costs $250 a week, more than the $180 room, but it includes dinner every day, a private bathroom and a sea view. The landlords are former teachers who like talking with young people and can help with English, and they take you out at weekends, which helps you settle in. It is 25 minutes by bus, but the stop is at the door. The cheaper room is close and full of students, but you must share and cook yourself."}, "id": "3"}], "level": 2, "kind": "reading"};
+const M = {"std_title": "Demonstrate understanding of a variety of written and / or visual Chinese text(s) on familiar matters", "grades": ["Demonstrate understanding of the texts.", "Demonstrate clear understanding of the texts.", "Demonstrate thorough understanding of the texts."], "instructions": ["Attempt ALL three questions. Answer in English, te reo Māori and / or Chinese.", "Use evidence from the text in every answer — quoting or translating alone is not enough for Merit or Excellence.", "Read each text carefully. Glossed words are explained under the text.", "Your answers save automatically on this device. Use “Download my answers” to keep or hand in a copy."], "section_plays": 2, "criteria": ["Makes meaning of relevant information, ideas and opinions; shows the general meaning (gist).", "Selects relevant information, ideas and opinions and communicates them unambiguously, with relevant detailed examples from the text.", "Expands on relevant information with supporting detail to show meanings or conclusions implied in the text, including nuance."], "descriptors": ["Very little understanding; general meaning not communicated.", "Little understanding; general meaning not communicated.", "Some understanding; some of the general meaning.", "Understanding; the general meaning.", "Clear understanding; some of the meaning, with relevant supporting detail.", "Clear understanding; most of the meaning, with relevant supporting detail.", "Thorough understanding; some implied meanings, with detail used to justify conclusions.", "Thorough understanding; most implied meanings, conclusions fully justified."], "cuts": ["0–7", "8–13", "14–18", "19–24"], "checks": {"1": {"level": 2, "chars": 346, "coverage": 100.0, "above_level": [], "common_unglossed": ["上", "下", "不太", "像", "后", "就要", "帮", "年轻", "才", "明白", "每", "照", "笑", "给", "自己", "里"], "off_list": []}, "2": {"level": 2, "chars": 339, "coverage": 100.0, "above_level": [], "common_unglossed": ["下", "不太", "儿", "回", "学", "希望", "懂", "照", "生", "给", "自己", "见", "跟", "问", "附近"], "off_list": []}, "3": {"level": 2, "chars": 333, "coverage": 100.0, "above_level": [], "common_unglossed": ["后", "就是", "帮", "年级", "年轻", "每", "站", "聊天", "能", "自己", "跟", "里", "附近"], "off_list": []}}};
+const NUM = ['ONE','TWO','THREE','FOUR','FIVE'];
+const KEY = 'ncea-pp-' + P.id;
+let S = {answers:{}, notes:{}, plays:{}};
+try { S = Object.assign(S, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch(e) {}
+const save = () => { try { localStorage.setItem(KEY, JSON.stringify(S)); document.getElementById('saved').textContent = 'Saved ' + new Date().toLocaleTimeString(); } catch(e) {} };
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const paras = s => String(s ?? '').split(/\n+/).filter(x=>x.trim()).map(x=>`<p>${esc(x)}</p>`).join('');
+
+function blocks(list){
+  let h = '', i = 0;
+  while (i < list.length){
+    const b = list[i];
+    if (b.type === 'card'){ let g=''; while(i<list.length && list[i].type==='card'){ const c=list[i++]; g+=`<div class="card"><div class="ct">${esc(c.title)}</div>${paras(c.text)}</div>`;} h+=`<div class="cards">${g}</div>`; continue; }
+    if (b.type === 'msg'){ let g=''; while(i<list.length && list[i].type==='msg'){ const c=list[i++]; g+=`<div class="msg ${c.side==='right'?'right':''}"><span class="who">${esc(c.who)}</span>${esc(c.text)}</div>`;} h+=`<div class="chat">${g}</div>`; continue; }
+    if (b.type === 'email') h += `<div class="email"><div class="eh">${b.from?`发件人：${esc(b.from)}<br>`:''}${b.to?`收件人：${esc(b.to)}<br>`:''}${b.subject?`主题：${esc(b.subject)}`:''}</div><div class="eb">${paras(b.text)}</div></div>`;
+    else if (b.type === 'post') h += `<div class="post ${b.reply?'reply':''}"><span class="who">${esc(b.who)}</span><span class="when">${esc(b.when||'')}</span>${paras(b.text)}</div>`;
+    else if (b.type === 'heading') h += `<h4>${esc(b.text)}</h4>`;
+    else if (b.type === 'image') h += `<div class="imgnote">Image: ${esc(b.alt)}</div>`;
+    else h += paras(b.text);
+    i++;
+  }
+  return h;
+}
+function glossTable(g){
+  if (!g || !g.length) return '';
+  return `<div class="gloss"><h5>Glossed vocabulary</h5><table class="zh">${g.map(x=>`<tr><td>${esc(x.zh)}</td><td>${esc(x.py)}</td><td>${esc(x.en)}</td></tr>`).join('')}</table></div>`;
+}
+function partsHTML(item){
+  return item.questions.map(q => {
+    const k = item.id + (q.part||'');
+    return `<div class="part"><p>${q.part?`<b>(${esc(q.part)})</b>`:''}${esc(q.text)}</p>
+      <textarea data-k="${esc(k)}" aria-label="Answer ${esc(k)}" style="min-height:${(q.lines||6)*22}px">${esc(S.answers[k]||'')}</textarea></div>`;
+  }).join('');
+}
+
+function render(){
+  const g = M.grades;
+  let h = `<header class="top">
+    <div class="std"><span class="num">${esc(P.standard)}</span><h1>${esc(M.std_title)}</h1></div>
+    <div class="meta">Level ${P.level} Chinese${P.level===1?' (Mandarin)':''} · Practice paper${P.title?': '+esc(P.title):''} · Credits: Five</div>
+    <div class="grades"><div><b>Achievement</b>${esc(g[0])}</div><div><b>Merit</b>${esc(g[1])}</div><div><b>Excellence</b>${esc(g[2])}</div></div>
+    <ul class="instr">${M.instructions.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></header>`;
+  P.items.forEach((item, n) => {
+    const head = `<div class="qhead"><h2>QUESTION ${NUM[n]}: <span class="zh">${esc(item.title_zh)}</span> (${esc(item.title_en)})</h2><span class="tag">${P.kind==='reading'?'Text '+String.fromCharCode(65+n):(['First','Second','Third'][n]||'')+' passage'}</span></div>`;
+    let left;
+    if (P.kind === 'reading'){
+      left = `<div class="res"><div class="inner"><p class="intro">${esc(item.intro)}</p><div class="text zh">${blocks(item.blocks)}</div>${glossTable(item.glosses)}</div></div>`;
+    } else {
+      const secs = item.sections.length;
+      let btns = `<div class="row"><button class="play" data-q="${item.id}" data-t="whole">▶ Whole passage</button><span class="left" id="left-${item.id}-whole"></span></div><div class="row">`;
+      for (let s=1; s<=secs; s++) btns += `<button data-q="${item.id}" data-t="s${s}">▶ Section ${s}</button><span class="left" id="left-${item.id}-s${s}"></span>`;
+      btns += `</div>`;
+      left = `<div class="res"><div class="inner"><p class="intro">${esc(item.intro)}</p>
+        ${item.glosses&&item.glosses.length?`<div class="row"><button data-q="${item.id}" data-t="gloss">🔈 Hear glossed words</button></div>`:''}
+        ${glossTable(item.glosses)}
+        <div class="player">${btns}<div class="now" id="now-${item.id}"></div></div>
+        <div class="notes"><h5 style="margin:0 0 6px;font-size:.8rem;color:var(--muted);text-transform:uppercase;letter-spacing:.05em">Listening notes</h5>
+        <textarea data-n="${item.id}" aria-label="Listening notes ${item.id}">${esc(S.notes[item.id]||'')}</textarea></div></div></div>`;
+    }
+    h += `<section class="q">${head}<div class="cols">${left}<div class="qs">${partsHTML(item)}</div></div></section>`;
+  });
+  document.getElementById('app').innerHTML = h;
+  document.querySelectorAll('textarea[data-k]').forEach(t => t.addEventListener('input', () => { S.answers[t.dataset.k] = t.value; save(); }));
+  document.querySelectorAll('textarea[data-n]').forEach(t => t.addEventListener('input', () => { S.notes[t.dataset.n] = t.value; save(); }));
+  document.querySelectorAll('button[data-q]').forEach(b => b.addEventListener('click', () => play(b.dataset.q, b.dataset.t)));
+  refresh();
+}
+
+// ---- listening rules: whole once, then each section M.section_plays times; no pausing inside a play
+let current = null, currentBtn = null;
+const practice = () => document.getElementById('practice').checked;
+const used = (q,t) => (S.plays[q]||{})[t]||0;
+const limit = t => t==='whole' ? 1 : t==='gloss' ? 99 : M.section_plays;
+function allowed(q,t){
+  if (practice()) return true;
+  if (t !== 'whole' && t !== 'gloss' && used(q,'whole') < 1) return false;
+  return used(q,t) < limit(t);
+}
+function refresh(){
+  document.querySelectorAll('button[data-q]').forEach(b => {
+    const {q,t} = b.dataset;
+    if (current && !practice()) { b.disabled = true; }
+    else b.disabled = !allowed(q,t) && !(practice() && current && currentBtn===b);
+    if (practice() && current && currentBtn===b) { b.textContent = '⏸ Stop'; }
+    else b.textContent = t==='whole' ? '▶ Whole passage' : t==='gloss' ? '🔈 Hear glossed words' : '▶ Section ' + t.slice(1);
+    const l = document.getElementById(`left-${q}-${t}`);
+    if (l) l.textContent = practice() ? '' : (t!=='whole' && used(q,'whole')<1 ? 'after whole passage' : `${Math.max(0, limit(t)-used(q,t))} left`);
+  });
+}
+function play(q,t){
+  if (current){ if (practice()){ current.pause(); current=null; currentBtn=null; refresh(); } return; }
+  if (!allowed(q,t)) return;
+  const a = new Audio(`audio/q${q}-${t}.mp3`);
+  current = a; currentBtn = document.querySelector(`button[data-q="${q}"][data-t="${t}"]`);
+  S.plays[q] = S.plays[q]||{}; S.plays[q][t] = used(q,t)+1; save();
+  const now = document.getElementById('now-'+q);
+  now.textContent = t==='whole' ? 'Playing the whole passage…' : t==='gloss' ? 'Playing glossed words…' : `Playing section ${t.slice(1)}…`;
+  const done = () => { current=null; currentBtn=null; now.textContent=''; refresh(); };
+  a.onended = done; a.onerror = () => { now.textContent = 'Audio file missing — run make_audio.py'; done(); };
+  a.play().catch(() => done());
+  refresh();
+}
+document.getElementById('practice').addEventListener('change', refresh);
+
+function answersText(){
+  let out = `${P.standard} ${M.std_title}\nPractice paper${P.title?': '+P.title:''}\nSaved ${new Date().toLocaleString()}\n\n`;
+  P.items.forEach((item,n) => {
+    out += `QUESTION ${NUM[n]}: ${item.title_zh} (${item.title_en})\n`;
+    if (S.notes[item.id]) out += `[Notes]\n${S.notes[item.id]}\n`;
+    item.questions.forEach(q => { const k=item.id+(q.part||''); out += `\n${q.part?'('+q.part+') ':''}${q.text}\n${S.answers[k]||'(no answer)'}\n`; });
+    out += '\n\n';
+  });
+  return out;
+}
+document.getElementById('dl').onclick = () => {
+  const out = answersText();
+  const url = URL.createObjectURL(new Blob([out], {type:'text/plain'}));
+  const a = document.createElement('a'); a.href = url; a.download = `${P.id}-answers.txt`; a.click(); URL.revokeObjectURL(url);
+};
+document.getElementById('prn').onclick = () => print();
+function showCopyBox(text, msg){
+  let box = document.getElementById('copybox');
+  if (!box){ box = document.createElement('div'); box.id='copybox'; box.className='copybox';
+    box.innerHTML = '<div class="row"><b id="copymsg"></b><button id="copyclose">Close</button></div><textarea id="copytext" aria-label="Your answers as text"></textarea>';
+    document.body.appendChild(box); document.getElementById('copyclose').onclick = () => box.remove(); }
+  document.getElementById('copymsg').textContent = msg;
+  const t = document.getElementById('copytext'); t.value = text; t.focus(); t.select();
+}
+document.getElementById('copy').onclick = () => {
+  const text = answersText();
+  const ok = () => { const b=document.getElementById('copy'); b.textContent='Copied ✓'; setTimeout(()=>b.textContent='Copy answers',2000); };
+  try { navigator.clipboard.writeText(text).then(ok, () => showCopyBox(text, 'Select all and copy this text:')); }
+  catch(e) { showCopyBox(text, 'Select all and copy this text:'); }
+};
+let clearArmed = null;
+document.getElementById('clear').onclick = (ev) => {
+  const b = ev.currentTarget;
+  if (!clearArmed){ b.textContent = 'Click again to clear'; clearArmed = setTimeout(()=>{ clearArmed=null; b.textContent='Clear'; }, 4000); return; }
+  clearTimeout(clearArmed); clearArmed = null; b.textContent = 'Clear';
+  S={answers:{},notes:{},plays:{}}; save(); render();
+};
+if (M.artifact){ document.getElementById('dl').hidden = true; document.getElementById('prn').hidden = true; }
+render();
+</script>
+</body>
+</html>
